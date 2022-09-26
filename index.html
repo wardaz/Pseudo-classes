@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+
+<style>
+    *{
+        padding: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+        background-color: rgb(235, 210, 210);
+    }
+
+    h1:nth-of-type(1){
+    color: royalblue;
+    text-align: center;
+    }
+
+    h2:nth-of-type(1) , h2:nth-of-type(2) ,  h2:nth-of-type(3)
+    {
+    color: royalblue;
+   padding-left: 30px;
+    }
+    
+ 
+    li:nth-last-of-type(odd){
+        background-color:  rgb(168, 133, 168);
+       list-style-type: arrows;
+       color: darkmagenta;
+       margin-right: 20px;
+     
+    }
+    li:nth-last-of-type(even){
+       list-style-type: arrows;
+       color:darkmagenta ;
+       margin-right: 20px; 
+    }
+
+    p:nth-last-of-type(1){
+       color:darkmagenta ;
+       margin-right: 20px; 
+    }
+
+        div:empty{
+        height: 20px;
+        width: 1180px;
+        background:rgb(12, 70, 124) ;
+        }
+
+        :not(p){
+           color: rgb(247, 15, 150); 
+        }
+
+        p:lang(it){
+            font-size: xx-large;
+            font-style: italic;
+        }
+
+</style>
+
+<h1>Pseudo Classes</h1>
+
+
+</head>
+<body>
+
+    <div></div><br>
+
+<h2>nth-of-type</h2>
+<ul>
+    <li>n can be a number, a keyword (odd or even)</li>
+    <li>This selector matches every element that is the nth child, of the same type (tag name), of its parent.</li>
+    <li>e.g :nth-last-of-type(2)   Selects only 2nd last element of its parent</li>
+</ul>
+
+<h2>not Selector</h2>
+<p>This selector matches every element that is NOT the specified element/selector.</p>
+<p>Here it will set a background color for all elements that are not a paragraph</p>
+    
+<h2>lang</h2>
+<p lang="it"> Selector is used to select elements with a lang attribute with the specified value.</p>
+
+</body>
+</html>
